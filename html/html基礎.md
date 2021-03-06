@@ -35,8 +35,7 @@
 * list是列表的意思。<br>
 * 比如我们在用无序列表时：&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;.显示出来的时候前面都是带点的。我们去掉前面的点会用到： list-style-type:none;<br>
 当然html5中也有list,是引用&lt;datalist&gt; 字面意思就是：数据列表。
-* 语法：&lt;input list="value"&gt;<br>
-<br>
+* 语法：&lt;input list="value"&gt;
 * list 属性引用 &lt;datalist&gt; 元素，其中包含 &lt;input&gt; 元素的预定义选项。<br>
 &lt;input list="browsers"&gt;规定绑定到 &lt;input&gt; 元素的 browsers的 id。<br>
 &lt;datalist id="browsers"&gt;<br>
@@ -45,5 +44,5 @@
 &lt;option value="Google Chrome"&gt;<br>
 &lt;option value="Opera"&gt;<br>
 &lt;option value="Safari"&gt;<br>
-&lt;/datalist&gt;<br>
+&lt;/datalist&gt;
 * list 属性是 HTML5 中的新属性。
