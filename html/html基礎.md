@@ -1,9 +1,9 @@
  #html基礎
   1.imgタグ何かできる、どうやって
-  <img> 标签定义 HTML 页面中的图像。
-  <img> 标签有两个必需的属性：src 和 alt。
-  注释：从技术上讲，图像并不会插入 HTML 页面中，而是链接到 HTML 页面上。<img> 标签的作用是为被引用的图像创建占位符。
-  提示：通过在 <a> 标签中嵌套 <img> 标签，给图像添加到另一个文档的链接。
-  
+  &ltimg&gt标签定义 HTML 页面中的图像。
+  &ltimg&gt 标签有两个必需的属性：src 和 alt。
+  注释：从技术上讲，图像并不会插入 HTML 页面中，而是链接到 HTML 页面上。&ltimg&gt 标签的作用是为被引用的图像创建占位符。
+  提示：通过在 &lta&gt 标签中嵌套 &ltimg&gt 标签，给图像添加到另一个文档的链接。
+  &ltimg src="" alt=""&gt
   例：
   <img src="https://image.huanghepiao.com/d/file/20200807/7438d5764874a30c4a5c0c8cf8e1b649.png" alt="苏醒">
