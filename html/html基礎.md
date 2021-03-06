@@ -7,4 +7,7 @@
 
     例：&lt;img src="xxx" alt="xxx"&gt;<br>
   <img src="https://image.huanghepiao.com/d/file/20200807/7438d5764874a30c4a5c0c8cf8e1b649.png" alt="苏醒"><br>
-  
+### 2. headタグ何かできる、どうやって
+* &lt;head&gt;元素是所有头部元素的容器。
+
+* &lt;head&gt;元素必须包含文档的标题（title），可以包含脚本、样式、meta 信息 以及其他更多的信息。
