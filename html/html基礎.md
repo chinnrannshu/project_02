@@ -46,3 +46,10 @@
 &lt;option value="Safari"&gt;<br>
 &lt;/datalist&gt;
 * list 属性是 HTML5 中的新属性。
+
+### 6.tableタグどうやって 表現してみよう 
+* &lt;table&gt; 标签定义 HTML 表格
+
+* 一个 HTML 表格包括 &lt;table&gt;元素，一个或多个&lt;tr&gt;、&lt;th&gt;以及 &lt;td&gt;元素。
+
+* &lt;tr&gt;元素定义表格行，&lt;th&gt; 元素定义表头，&lt;td&gt;元素定义表格单元。
