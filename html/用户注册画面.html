@@ -12,43 +12,45 @@
         <table>
             <tr>
                 <td></td>
-                <td>用户注册中心</td>
-
+                <td>
+                    <h3>用户注册中心</h3>
+                </td>
             </tr>
             <tr>
-                <td>用户名：</td>
-                <td><input type="text"></td>
+                <td><label for="username">用户名：</label></td>
+                <td> <input type="text" name="username" id="username"></td>
+                <td></td>
             </tr>
             <tr>
-                <td>设置密码：</td>
-                <td><input type="password"></td>
-
+                <td><label for="psw1">设置密码：</label></td>
+                <td><input type="password" name="psw1" id="psw1"></td>
+                <td></td>
             </tr>
             <tr>
-                <td>确认密码：</td>
-                <td><input type="password"></td>
+                <td><label for="psw2">确认密码：</label></td>
+                <td><input type="password" name="psw2" id="psw2"></td>
+                <td></td>
             </tr>
             <tr>
-                <td>中国0086</td>
-                <td><input type="number"></td>
-
+                <td><label for="number">中国0086:</label></td>
+                <td><input type="text" name="number" id="number"></td>
+                <td></td>
             </tr>
             <tr>
-                <td>验证码：</td>
-                <td><input type="text"></td>
-                <td><img src="images/yan.png" alt=""></td>
+                <td><label for="checknumber1">验证码:</label></td>
+                <td><input type="text" name="checknumber1" id="checknumber1"></td>
+                <td><img src="images/yan.png"> </td>
             </tr>
             <tr>
-                <td>手机验证：</td>
-                <td><input type="text"></td>
-                <td><input type="submit" value="发送验证码"></td>
+                <td><label for="checknumber2">手机验证：</label></td>
+                <td><input type="text" name="checknumber2" id="checknumber2"></td>
+                <td><input type="button" value="发送验证码"> </td>
             </tr>
             <tr>
-                <td><input type="radio">阅读同意<a href="#">用户注册协议</a></td>
-
+                <td><input type="radio" name="agree">阅读同意<a href="#">用户注册协议</a></td>
             </tr>
             <tr>
-                <td><input type="button" value="重置"><input type="submit" value="注册"></td>
+                <td><input type="reset" value="重置"><input type="submit" value="注册"></td>
             </tr>
         </table>
     </form>
