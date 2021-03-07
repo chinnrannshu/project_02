@@ -11,5 +11,8 @@
 
 <select> 元素中的 <option> 标签定义了列表中的可用选项。
 ```
+### 3.checkbox部品何かできる、どうやって
+type 属性可返回元素的表单类型。
 
+对于一个 checkbox 对象，该属性总是返回 "checkbox"。
 
