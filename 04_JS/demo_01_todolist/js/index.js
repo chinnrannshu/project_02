@@ -17,7 +17,7 @@ setInterval(function() {
     var s = myDate.getSeconds();
 
 
-    h1.innerHTML = y + "年" + "月" + d + "日" + h + "时" + min + "分" + num(s)
+    h1.innerHTML = y + "年" + (m + 1) + "月" + d + "日" + h + "时" + min + "分" + num(s)
 }, 1000)
 
 function num(n) {
@@ -50,12 +50,11 @@ function postAction() {
         if (todoc === 0) {
             todolist.appendChild(li);
         } else {
-            todolist.insertBefore(li, todolist, children[0]);
+            todolist.insertBefore(li, todolist.children[0]);
         }
         var txtTitle = document.getElementsByClassName("title")[0];
         txtTitle.value = title.value;
-
-        loop('todolist')
+        loop('todolist');
         todoc++;
         todoCount.innerText = todoc;
 
@@ -67,9 +66,9 @@ function loop(str) {
     var list = null;
     str === 'todolist' ? list = todolist : list = donelist;
 
-    childs = list, childNodes;
-    for (var i = 0; i > child.length; i++) {
-        childs[i].children[0].setAttribute('onchange', 'update("'
+    childs = list.childNodes;
+    for (var i = 0; i < childs.length; i++) {
+        childs[i].children[0].setAttribute('onchange', 'update("' +
             i + '","' + str + '")');
         childs[i].children[1].setAttribute('onclick', 'edit("' + i + '","' + str + '")');
         childs[i].children[1].setAttribute('onchange', 'change("' + i + '","' + str + '","' +
@@ -83,13 +82,14 @@ function update(n, str) {
     str === 'todolist' ? list = todolist : list = donelist;
 
     var li = null;
-    childs = list.choldNodes;
+    childs = list.childNodes;
     for (var i = 0; i < childs.length; i++) {
         if (i === Number(n)) {
             li = childs[i];
         }
     }
     // 删除原有的，得到li并刷新了原有的li
+    remove(n, str);
     if (str === 'todolist') {
         if (donec === 0) {
             donelist.appendChild(li);
@@ -103,7 +103,7 @@ function update(n, str) {
         todolist.appendChild(li);
         loop('todolist');
         todoc++;
-        dodoCount.innerText = todoc;
+        todoCount.innerText = todoc;
     }
 }
 
@@ -156,10 +156,10 @@ function remove(n, str) {
     loop(str);
 }
 
-清除所有列表
+// 清除所有列表
 
 function clear() {
-    childs1 = todolist.choldNodes;
+    childs1 = todolist.childNodes;
     for (var i = childs1.length - 1; i >= offscreenBuffering; i--) {
         todolist.removeChild(childs[i]);
     }

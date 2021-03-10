@@ -5,7 +5,8 @@
     <!-- 规定 HTML 文档的字符集 -->
     <meta charset="UTF-8">
     <!-- 窗口设定  宽度：设备宽度，初始比例：1.0，最大比例：1.0，用户可缩放：否 -->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=no" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=no" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todolist最简单的待办事项列表</title>
     <!-- 引入index.css -->
     <link type="text/css" rel="stylesheet" href="css/index.css">
@@ -24,7 +25,7 @@
             <!-- javascript:; -》javascript: 表示要执行js代码 -->
             <form id="form" action="javascript:postAction()">
                 <label for="title">ToDolist</label>
-                <input id="title" name="title" placeholder="添加ToDo" required="required" autocapitalize="off" type="text">
+                <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocapitalize="off">
             </form>
         </div>
         <!-- 中间的内容 -->
@@ -33,12 +34,12 @@
                 正在进行的计划
                 <span id="todocount">0</span>
             </h2>
-            <ul id="todocount"></ul>
+            <ul id="todolist"></ul>
             <h2>
                 已经完成的计划
                 <span id="denecount">0</span>
             </h2>
-            <ul id="denecount"></ul>
+            <ul id="dene"></ul>
         </div>
         <!-- 清除键内容 -->
         <div class="clear">
