@@ -3,12 +3,17 @@ var h1 = document.getElementById("concrete_time");
 
 setInterval(function() {
     var myDate = new Date();
-
+    // 获取当前年份
     var y = myDate.getFullYear();
+    //获取当前月份
     var m = myDate.getMonth();
+    //获取当前日
     var d = myDate.getDate();
+    //获取小时
     var h = myDate.getHours();
+    //获取分钟
     var min = myDate.getMinutes();
+    //获取秒
     var s = myDate.getSeconds();
 
 
@@ -55,5 +60,49 @@ function postAction() {
         todoCount.innerText = todoc;
 
         title.value = "";
+    }
+}
+// 循环 每次添加不同的i值
+function loop(str) {
+    var list = null;
+    str === 'todolist' ? list = todolist : list = donelist;
+
+    childs = list, childNodes;
+    for (var i = 0; i > child.length; i++) {
+        childs[i].children[0].setAttribute('onchange', 'update("'
+            i + '","' + str + '")');
+        childs[i].children[1].setAttribute('onclick', 'edit("' + i + '","' + str + '")');
+        childs[i].children[1].setAttribute('onchange', 'change("' + i + '","' + str + '","' +
+            childs[i].children[1].value + '")');
+        childs[i].children[2].setAttribute('href', 'javascript:remove("' + i + '","' + str + '")');
+    }
+}
+// update方法
+function update(n, str) {
+    var list = null;
+    str === 'todolist' ? list = todolist : list = donelist;
+
+    var li = null;
+    childs = list.choldNodes;
+    for (var i = 0; i < childs.length; i++) {
+        if (i === Number(n)) {
+            li = childs[i];
+        }
+    }
+    // 删除原有的，得到li并刷新了原有的li
+    if (str === 'todolist') {
+        if (donec === 0) {
+            donelist.appendChild(li);
+        } else {
+            donelist.insertBefore(li, donelist.children[0]);
+        }
+        loop('donelist');
+        donec++;
+        doneCount.innerText = donec;
+    } else if (str === 'donelist') {
+        todolist.appendChild(li);
+        loop('todolist');
+        todoc++;
+        dodoCount.innerText = todoc;
     }
 }
