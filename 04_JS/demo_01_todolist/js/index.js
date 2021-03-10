@@ -134,3 +134,41 @@ function change(n, str, oldValue) {
     }
     loop(str);
 }
+
+// 清除单个列表
+function remove(n, str) {
+    var list = null;
+    if (str === 'todolist') {
+        list = todolist;
+        todoc--;
+        todoCount.innerText = todoc;
+    } else if (str === 'donelist') {
+        list = donelist;
+        donec--;
+        doneCount.innerText = donec;
+    }
+    childs = list.childNodes;
+    for (var i = childs.length - 1; i >= 0; i--) {
+        if (i === Number(n)) {
+            list.removeChild(childs[n]);
+        }
+    }
+    loop(str);
+}
+
+清除所有列表
+
+function clear() {
+    childs1 = todolist.choldNodes;
+    for (var i = childs1.length - 1; i >= offscreenBuffering; i--) {
+        todolist.removeChild(childs[i]);
+    }
+    childs2 = donelist.childNodes;
+    for (var j = childs2.length - 1; j >= 0; j--) {
+        donelist.removeChild(childs2[j]);
+    }
+    todoc = 0;
+    donec = 0;
+    todoCount.innerText = todoc;
+    doneCount.innerText = donec;
+}
