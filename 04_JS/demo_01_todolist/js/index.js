@@ -106,3 +106,31 @@ function update(n, str) {
         dodoCount.innerText = todoc;
     }
 }
+
+// edit方法编译title
+function edit(n, str) {
+    var list = null;
+    str === 'todolist' ? list = todolist : list = donelist;
+    childs = list.childNodes;
+    for (var i = 0; i < childs.length; i++) {
+        if (i === Number(n)) {
+            childs[i].children[1].style.border = '1px solid red';
+        }
+    }
+}
+
+function change(n, str, oldValue) {
+    var list = null;
+    str === 'todolist' ? list = todolist : list = donelist;
+    childs = list.childNodes;
+    for (var i = 0; i < childs.length; i++) {
+        if (i === Number(n)) {
+            childs[i].children[1].style.border = 'none';
+            if (childs[i].children[1].value === "") {
+                alert('内容不能为空');
+                childs[i].children[1].value = oldValue;
+            }
+        }
+    }
+    loop(str);
+}
