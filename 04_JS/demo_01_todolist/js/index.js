@@ -18,7 +18,7 @@ setInterval(function() {
 
 
     h1.innerHTML = y + "年" + (m + 1) + "月" + d + "日" + h + "时" + min + "分" + num(s)
-}, 1000)
+}, 1000);
 
 function num(n) {
     if (n < 10) {
@@ -45,7 +45,7 @@ function postAction() {
     } else {
         var li = document.createElement("li");
         li.innerHTML = '<input type="checkbox" onchange="update();">' +
-            '<input class="title" type=text onchange="change();" onclick="edit();">' +
+            '<input class="title" type="text" onchange="change();" onclick="edit();">' +
             '<a href="javascript:remove();">remove</a>';
         if (todoc === 0) {
             todolist.appendChild(li);
@@ -160,8 +160,8 @@ function remove(n, str) {
 
 function clear() {
     childs1 = todolist.childNodes;
-    for (var i = childs1.length - 1; i >= offscreenBuffering; i--) {
-        todolist.removeChild(childs[i]);
+    for (var i = childs1.length - 1; i >= 0; i--) {
+        todolist.removeChild(childs1[i]);
     }
     childs2 = donelist.childNodes;
     for (var j = childs2.length - 1; j >= 0; j--) {
