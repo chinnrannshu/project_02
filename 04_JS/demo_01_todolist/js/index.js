@@ -1,7 +1,9 @@
 // 设置时间
-var h1 = document.getElementById("concrete_time");
+var show_time = document.getElementById("concrete_time");
 
-setInterval(function() {
+setInterval(showtime, 1);
+
+function showtime() {
     var myDate = new Date();
     // 获取当前年份
     var y = myDate.getFullYear();
@@ -16,9 +18,10 @@ setInterval(function() {
     //获取秒
     var s = myDate.getSeconds();
 
+    var ms = myDate.getMilliseconds();
 
-    h1.innerHTML = y + "年" + (m + 1) + "月" + d + "日" + h + "时" + min + "分" + num(s)
-}, 1000);
+    show_time.innerHTML = y + "年" + (m + 1) + "月" + d + "日" + h + "时" + min + "分" + num(s) + "不知道啥的秒" + ms
+}
 
 function num(n) {
     if (n < 10) {
