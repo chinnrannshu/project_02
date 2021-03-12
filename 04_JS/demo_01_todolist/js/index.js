@@ -18,9 +18,7 @@ function showtime() {
     //获取秒
     var s = myDate.getSeconds();
 
-    var ms = myDate.getMilliseconds();
-
-    show_time.innerHTML = y + "年" + (m + 1) + "月" + d + "日" + h + "时" + min + "分" + num(s) + "不知道啥的秒" + ms
+    show_time.innerHTML = y + "年" + (m + 1) + "月" + d + "日" + h + "时" + min + "分" + num(s) + "秒"
 }
 
 function num(n) {
