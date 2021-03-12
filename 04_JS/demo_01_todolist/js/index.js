@@ -1,4 +1,5 @@
 // 设置时间
+// 文件.取得元素（对象）用ID （字符串）
 var show_time = document.getElementById("concrete_time");
 
 setInterval(showtime, 1);
@@ -27,7 +28,7 @@ function num(n) {
     }
     return n
 }
-
+// 声明 变量
 var todolist = document.getElementById('todolist');
 var donelist = document.getElementById('donelist');
 
